@@ -46,10 +46,12 @@ def anomalia_function (climatologia, df_filtrado):
     print(df_anomalia[['data','temperatura','anomalia']])
     return df_anomalia
 
-climatologia, df_filtrado = climatologia_function(df)
-anomalia_function(climatologia, df_filtrado)
 
-df_anomalia = anomalia_function(climatologia, df_filtrado)
+#Exibe a tabela 
+#climatologia, df_filtrado = climatologia_function(df)
+#anomalia_function(climatologia, df_filtrado)
+
+#df_anomalia = anomalia_function(climatologia, df_filtrado)
 
 
 #Verifica o tamanho das colunas, se for diferente algo deu errado.
