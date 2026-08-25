@@ -14,7 +14,12 @@ def pareamento_function(dados, intervalo_N):
     df_anomalia_copia['data_depois']= df_anomalia_copia['data'].shift(-intervalo_N)
 
     df_anomalia_copia['diferenca_data'] = df_anomalia_copia['data_depois'] - df_anomalia_copia['data']
-    df_anomalia_copia['diferenca_data'] = pd.Timedelta(days=intervalo_N)
+    pares_validos = df_anomalia_copia[df_anomalia_copia['diferenca_data'] == pd.Timedelta(days=intervalo_N)].copy()
+
+    return pares_validos
+
+
+print(len(df_anomalia), len(pareamento_function(df_anomalia, 1)))
 
     
 
